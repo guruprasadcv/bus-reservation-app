@@ -10,13 +10,13 @@
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5">Login form</h3>
+        <h3 class="text-center text-white pt-5">forgot password</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                    <form:form action="processLogin" modelAttribute="loginUser">
-                            <h3 class="text-center text-info">Login</h3>
+                    <form:form action="resetPassword" modelAttribute="fp">
+                            <h3 class="text-center text-info">Reset Password</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Username:</label><br>
                                 <form:input path="username" class="form-control"/>
@@ -26,15 +26,19 @@
                                 <form:password path="password" class="form-control"/>
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
-                                <div align="center" style="color: red;">${errorMessage}</div> 
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Reset">
                             </div>
-                            <div id="register-link" class="text-right">
-                                <a href="/bus-reservation-app/password/forgotPassword" class="text-info">Forgot password?</a>
-                            </div>
-                             <div id="register-link" class="text-left">
-                                <a href="/bus-reservation-app/register/registerPage" class="text-info">Not yet Registered?</a>
-                            </div>
+                            <c:if test="${successMessage ne null}">
+									<div align="center"></div>${successMessage}
+									</br>
+									Click <a href="/bus-reservation-app/login/loginPage"> here </a>  to Login
+								</c:if>
+							</div>
+							<%-- <div align="center" style="color: red;">${errorMessage}</div>  --%>
+							<c:if test="${errorMessage ne null}">
+								<div align="center"></div>${errorMessage}
+								</br>Please <a href="/bus-reservation-app/register/registerPage">Register</a>
+							</c:if>
                         </form:form>
                     </div>
                 </div>
