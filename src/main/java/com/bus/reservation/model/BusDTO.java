@@ -1,52 +1,18 @@
-package com.bus.reservation.entity;
+package com.bus.reservation.model;
 
-import java.util.Calendar;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
-@Entity
-@Table(name = "bus_details")
-public class BusEntity {
-
-	@Id
-	@Column(name = "bus_id")
+public class BusDTO {
 	private String busId;
-
-	@Column(name = "department_name")
 	private String departmentName;
-
-	@Column(name = "source")
 	private String source;
-
-	@Column(name = "destination")
 	private String destination;
-
-	@Column(name = "fare")
 	private Double fare;
-
-	@DateTimeFormat(pattern = "dd-mm-yyyy")
-	@Temporal(TemporalType.DATE)
-	@Column(name = "available_date")
-	private Calendar availableDate;
-
-	@Column(name = "seats_available")
+	private String availableDate;
 	private Integer seatsAvailable;
-
-	@Column(name = "departure_time")
+	private String username;
+	private String email;
+	private String phoneNumber;
 	private String departureTime;
-
-	@Column(name = "arrival_time")
 	private String arrivalTime;
-
-	public BusEntity() {
-	}
 
 	public String getBusId() {
 		return busId;
@@ -88,11 +54,11 @@ public class BusEntity {
 		this.fare = fare;
 	}
 
-	public Calendar getAvailableDate() {
+	public String getAvailableDate() {
 		return availableDate;
 	}
 
-	public void setAvailableDate(Calendar availableDate) {
+	public void setAvailableDate(String availableDate) {
 		this.availableDate = availableDate;
 	}
 
@@ -102,6 +68,30 @@ public class BusEntity {
 
 	public void setSeatsAvailable(Integer seatsAvailable) {
 		this.seatsAvailable = seatsAvailable;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getDepartureTime() {
@@ -122,10 +112,10 @@ public class BusEntity {
 
 	@Override
 	public String toString() {
-		return "BusEntity [busId=" + busId + ", departmentName=" + departmentName + ", source=" + source
-				+ ", destination=" + destination + ", fare=" + fare + ", availableDate=" + availableDate
-				+ ", seatsAvailable=" + seatsAvailable + ", departureTime=" + departureTime + ", arrivalTime="
-				+ arrivalTime + "]";
+		return "BusDTO [busId=" + busId + ", departmentName=" + departmentName + ", source=" + source + ", destination="
+				+ destination + ", fare=" + fare + ", availableDate=" + availableDate + ", seatsAvailable="
+				+ seatsAvailable + ", username=" + username + ", email=" + email + ", phoneNumber=" + phoneNumber
+				+ ", departureTime=" + departureTime + ", arrivalTime=" + arrivalTime + "]";
 	}
 
 }

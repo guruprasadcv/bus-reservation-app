@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bus.reservation.exception.InvalidDestinationException;
-import com.bus.reservation.exception.InvalidJourneyDate;
 import com.bus.reservation.exception.InvalidSourceDestinationException;
 import com.bus.reservation.exception.InvalidSourceException;
 import com.bus.reservation.exception.NoBusesAvailableException;

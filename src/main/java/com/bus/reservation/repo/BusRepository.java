@@ -20,5 +20,7 @@ public interface BusRepository extends JpaRepository<BusEntity, String> {
 	@Query("select b from BusEntity b where b.source=:source and b.destination=:destination and b.availableDate=:journeyDate")
 	List<BusEntity> searchBuses(@Param("source") String source, @Param("destination") String destination,
 			@Param("journeyDate") Calendar journeyDate);
+	
+	BusEntity findBybusId(String busId);
 
 }

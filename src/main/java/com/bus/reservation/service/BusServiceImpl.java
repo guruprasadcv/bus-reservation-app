@@ -66,6 +66,8 @@ public class BusServiceImpl implements BusService {
 			busModel.setFare(busEntity.getFare());
 			busModel.setSeatsAvailable(busEntity.getSeatsAvailable());
 			busModel.setBusId(busEntity.getBusId());
+			busModel.setDepartureTime(busEntity.getDepartureTime());
+			busModel.setArrivalTime(busEntity.getArrivalTime());
 			availableBuses.add(busModel);
 		}
 		return availableBuses;

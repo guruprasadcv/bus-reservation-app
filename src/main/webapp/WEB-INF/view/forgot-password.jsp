@@ -34,7 +34,6 @@
 									Click <a href="/bus-reservation-app/login/loginPage"> here </a>  to Login
 								</c:if>
 							</div>
-							<%-- <div align="center" style="color: red;">${errorMessage}</div>  --%>
 							<c:if test="${errorMessage ne null}">
 								<div align="center"></div>${errorMessage}
 								</br>Please <a href="/bus-reservation-app/register/registerPage">Register</a>

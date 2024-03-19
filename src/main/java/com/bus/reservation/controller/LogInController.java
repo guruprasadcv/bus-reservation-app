@@ -69,6 +69,8 @@ public class LogInController {
 
 			HttpSession httpSession = httpRequest.getSession();
 			httpSession.setAttribute("username", loginUser.getUserName());
+			httpSession.setAttribute("email", loginUser.getEmail());
+			httpSession.setAttribute("phone", loginUser.getPhoneNumber());
 
 			List<String> busSources = busService.findSources();
 			modelMap.addAttribute("busSourceList", busSources);

@@ -77,6 +77,8 @@
 						<th>Fare</th>
 						<th>Available Date</th>
 						<th>Seats Available</th>
+						<th>Departure Time</th>
+						<th>Arrival Time</th>
 					</tr>
 				</thead>
 
@@ -89,9 +91,11 @@
 							<td>${busList.fare}</td>
 							<td>${busList.availableDate}</td>
 							<td>${busList.seatsAvailable}</td>
+							<td>${busList.departureTime}</td>
+							<td>${busList.arrivalTime}</td>
 
 							<td><a
-								href="/bus-reservation-app/booking/bookBus?id=${busList.busId}"
+								href="/bus-reservation-app/booking/bookBus?busId=${busList.busId}"
 								class="btn btn-primary">Book</a></td>
 						</tr>
 					</c:forEach>

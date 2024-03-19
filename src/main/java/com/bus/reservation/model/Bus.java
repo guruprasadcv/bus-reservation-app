@@ -8,6 +8,8 @@ public class Bus {
 	private Double fare;
 	private String availableDate;
 	private Integer seatsAvailable;
+	private String departureTime;
+	private String arrivalTime;
 
 	public String getBusId() {
 		return busId;
@@ -65,11 +67,27 @@ public class Bus {
 		this.seatsAvailable = seatsAvailable;
 	}
 
+	public String getDepartureTime() {
+		return departureTime;
+	}
+
+	public void setDepartureTime(String departureTime) {
+		this.departureTime = departureTime;
+	}
+
+	public String getArrivalTime() {
+		return arrivalTime;
+	}
+
+	public void setArrivalTime(String arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+
 	@Override
 	public String toString() {
 		return "Bus [busId=" + busId + ", departmentName=" + departmentName + ", source=" + source + ", destination="
 				+ destination + ", fare=" + fare + ", availableDate=" + availableDate + ", seatsAvailable="
-				+ seatsAvailable + "]";
+				+ seatsAvailable + ", departureTime=" + departureTime + ", arrivalTime=" + arrivalTime + "]";
 	}
 
 }
