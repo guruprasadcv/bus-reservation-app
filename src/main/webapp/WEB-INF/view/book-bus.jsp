@@ -66,6 +66,7 @@
 
 	</br>
 
+<c:if test="${size > 0}">
 	<div align="center">
 		<form:form modelAttribute="bus">
 			<table class="table table-striped" style="">
@@ -104,5 +105,6 @@
 			</table>
 		</form:form>
 	</div>
+	</c:if>
 </body>
 </html>

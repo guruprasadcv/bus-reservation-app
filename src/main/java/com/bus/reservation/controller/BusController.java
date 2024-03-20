@@ -62,11 +62,8 @@ public class BusController {
 
 			List<Bus> availableBusList = busService.serachBuses(source, destination, calendar);
 			modelMap.addAttribute("availableBuses", availableBusList);
-//			for (Bus busList : availableBusList) {
-//				httpSession.setAttribute("busId", busList.getBusId());
-//			}
+			modelMap.addAttribute("size", availableBusList.size());
 			modelAndView = new ModelAndView("book-bus", "bus", bus);
-
 		} catch (ParseException | InvalidSourceDestinationException | NoBusesAvailableException | InvalidSourceException
 				| InvalidDestinationException e) {
 			if (e.getMessage().contains("BusService")) {

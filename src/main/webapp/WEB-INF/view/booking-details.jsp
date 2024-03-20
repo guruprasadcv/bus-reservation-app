@@ -19,7 +19,7 @@
 <body>
 	<%@include file="menu.jsp"%>
 	<div align="center" >
-	<h2 class="h4 text-center">Booking Details</h2>
+	<h2 class="h4 text-center">Booking Review</h2>
 	
 	<form:form modelAttribute="busDTO">
 		<div class="row margin-top 10">
