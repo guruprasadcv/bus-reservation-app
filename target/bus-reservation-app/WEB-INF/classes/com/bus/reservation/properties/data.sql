@@ -1,1 +1,0 @@
-insert into bus_details values("KSRTC101", "KSRTC", "Bengaluru", "Chitradurga", "290", DATE_ADD(CURDATE(), INTERVAL 1 DAY), "29")
